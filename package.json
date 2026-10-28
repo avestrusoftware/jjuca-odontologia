@@ -1,0 +1,8 @@
+{
+  "name": "jjuca-odontologia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page J.Jucá Odontologia",
+  "scripts": { "dev": "node server.mjs", "check": "node scripts/check.mjs" },
+  "dependencies": { "gsap": "3.14.2" }
+}

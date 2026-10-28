@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cirurgias",
+    "name": "Cirurgias dentárias",
+    "src": "https://images.pexels.com/photos/6812520/pexels-photo-6812520.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/patient-at-dental-clinic-during-procedure-6812520/",
+    "author": "Pavel Danilyuk",
+    "bank": "Pexels",
+    "alt": "Profissionais realizando um procedimento odontológico",
+    "position": "50% 48%"
+  },
+  {
+    "id": "proteses-implantes",
+    "name": "Próteses e implantes dentários",
+    "src": "https://images.unsplash.com/photo-1777445826358-f95518f49b44?auto=format&fit=crop&q=85&w=1000",
+    "page": "https://unsplash.com/photos/dentist-demonstrating-dental-implant-on-model-LOgBp87WzIk",
+    "author": "Harold Hisona",
+    "bank": "Unsplash",
+    "alt": "Demonstração de um implante em modelo odontológico",
+    "position": "50% 50%"
+  },
+  {
+    "id": "reabilitacao",
+    "name": "Reabilitação oral",
+    "src": "https://images.pexels.com/photos/4270084/pexels-photo-4270084.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/man-in-gray-scrub-suit-holding-teeth-model-4270084/",
+    "author": "Cedric Fauntleroy",
+    "bank": "Pexels",
+    "alt": "Dentista explicando um tratamento com modelo dentário",
+    "position": "50% 52%"
+  },
+  {
+    "id": "ortodontia",
+    "name": "Ortodontia · Invisalign",
+    "src": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=85&w=1000",
+    "page": "https://unsplash.com/photos/person-inserting-clear-dental-aligner-fmB7IdFjhTM",
+    "author": "Diana Polekhina",
+    "bank": "Unsplash",
+    "alt": "Pessoa colocando um alinhador transparente",
+    "position": "50% 48%"
+  },
+  {
+    "id": "clareamento",
+    "name": "Clareamento",
+    "src": "https://images.pexels.com/photos/3762441/pexels-photo-3762441.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/woman-with-pink-lipstick-3762441/",
+    "author": "Shiny Diamond",
+    "bank": "Pexels",
+    "alt": "Detalhe de um sorriso com dentes claros",
+    "position": "50% 50%"
+  },
+  {
+    "id": "facetas",
+    "name": "Facetas",
+    "src": "https://images.pexels.com/photos/6812501/pexels-photo-6812501.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/lined-up-veneers-on-display-6812501/",
+    "author": "Pavel Danilyuk",
+    "bank": "Pexels",
+    "alt": "Escala de cores de facetas para planejamento estético",
+    "position": "50% 60%"
+  },
+  {
+    "id": "endodontia",
+    "name": "Endodontia",
+    "src": "https://images.pexels.com/photos/9951387/pexels-photo-9951387.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/dentist-working-on-laptop-9951387/",
+    "author": "Bakytzhan Baurzhanov",
+    "bank": "Pexels",
+    "alt": "Profissional analisando uma radiografia odontológica",
+    "position": "50% 55%"
+  },
+  {
+    "id": "periodontia",
+    "name": "Periodontia",
+    "src": "https://images.pexels.com/photos/3845735/pexels-photo-3845735.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/dental-cleaning-3845735/",
+    "author": "Anna Shvets",
+    "bank": "Pexels",
+    "alt": "Atendimento de limpeza e cuidado odontológico",
+    "position": "50% 48%"
+  },
+  {
+    "id": "odontogeriatria",
+    "name": "Odontogeriatria",
+    "src": "https://images.pexels.com/photos/5622025/pexels-photo-5622025.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/a-dentist-showing-an-elderly-woman-her-denture-5622025/",
+    "author": "Gustavo Fring",
+    "bank": "Pexels",
+    "alt": "Profissional orientando uma paciente idosa",
+    "position": "50% 45%"
+  },
+  {
+    "id": "harmonizacao",
+    "name": "Harmonização facial",
+    "src": "https://images.pexels.com/photos/7789649/pexels-photo-7789649.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/a-woman-getting-a-facial-treatment-7789649/",
+    "author": "Ivan Babydov",
+    "bank": "Pexels",
+    "alt": "Atendimento estético facial em ambiente clínico",
+    "position": "50% 45%"
+  },
+  {
+    "id": "bichectomia",
+    "name": "Bichectomia",
+    "src": "https://images.pexels.com/photos/11033990/pexels-photo-11033990.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/portrait-of-woman-with-beauty-mark-on-cheek-11033990/",
+    "author": "Becca Correia",
+    "bank": "Pexels",
+    "alt": "Retrato ilustrativo destacando o contorno do rosto",
+    "position": "50% 40%"
+  },
+  {
+    "id": "odontopediatria",
+    "name": "Odontopediatria",
+    "src": "https://images.pexels.com/photos/7800560/pexels-photo-7800560.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    "page": "https://www.pexels.com/photo/dentist-showing-a-dental-tool-to-patient-7800560/",
+    "author": "Nadezhda Moryak",
+    "bank": "Pexels",
+    "alt": "Criança sorrindo durante um atendimento odontológico acolhedor",
+    "position": "50% 48%"
+  }
+]

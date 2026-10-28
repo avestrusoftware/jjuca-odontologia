@@ -1,0 +1,25 @@
+.clinic-wordmark{display:block;rotate:-4.05deg;transform-origin:center;object-fit:contain}
+.hero-bottom{
+  display:flex;align-items:center;justify-content:flex-end;container-type:inline-size;
+  left:4.5%;right:4.5%;bottom:61px;
+}
+.wordmark-shell{display:block;line-height:0}
+.hero-word.hero-wordmark-shell{width:min(88%,940px);margin:0;letter-spacing:normal}
+.hero-wordmark-image{
+  width:100%;height:auto;
+  max-height:clamp(120px,calc(40svh - 110px),290px);
+  object-position:right center;margin:0;letter-spacing:normal;
+}
+.footer-wordmark{
+  display:flex;align-items:center;justify-content:center;container-type:inline-size;
+  margin:24px 0 0;padding:3.75% 1.5%;font-size:0;letter-spacing:0;line-height:0;
+}
+.footer-wordmark-shell{width:96%;max-width:1500px}
+.footer-wordmark-image{width:100%;height:auto}
+@media(max-width:760px){
+  .hero-bottom{left:6%;right:6%;bottom:60px}
+  .hero-word.hero-wordmark-shell{width:94%}
+  .hero-wordmark-image{max-height:clamp(80px,28cqw,170px)}
+  .hero-note{bottom:calc(100px + clamp(80px,28vw,170px))}
+  .footer-wordmark{margin-top:20px}
+}

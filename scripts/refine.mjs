@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const file=path.resolve(import.meta.dirname,'../dist/index.html');
+let html=fs.readFileSync(file,'utf8');
+html=html.replaceAll('https://www.contate.me/552199850230591','https://wa.me/5521998502305?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.');
+html=html.replace('Do primeiro<br>dentinho a novos<br>motivos para<br>','Do primeiro <br>dentinho a novos <br>motivos para <br>');
+html=html.replace('Seu sorriso merece</span>','Seu sorriso merece </span>');
+html=html.replace(', conforme os endereços do nosso Linktree.','.');
+html=html.replace('<a class="emergency-link" href="tel:+5521997507770"><svg><use href="#clock"/></svg>','<a class="emergency-link" href="tel:+5521997507770"><img src="/assets/placa-24h.webp" alt="" loading="lazy" width="38" height="38">');
+fs.writeFileSync(file,html);

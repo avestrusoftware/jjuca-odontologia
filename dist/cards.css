@@ -1,0 +1,94 @@
+/* Photography and foreground layers keep the original three-card composition. */
+.brand-tooth{object-fit:contain;flex-shrink:0;pointer-events:none}
+.experience-card .experience-photo{
+  object-position:54% 46%;
+  translate:0 var(--photo-y,0%);
+  scale:var(--photo-scale,1.08);
+}
+.experience-vignette,.scanner-vignette{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+}
+.experience-vignette{
+  background:linear-gradient(180deg,#172d25c9 0%,#172d2514 45%,#10241af0 100%);
+}
+.experience-card .card-sparkle{fill:var(--orange)}
+.experience-card .feature-bottom p{color:var(--paper)}
+.experience-card .card-pill{display:flex;align-items:center;gap:6px;background:#172d2580}
+.experience-card .card-pill svg{width:10px;height:10px;flex-shrink:0}
+.experience-card .metric{text-shadow:0 3px 25px #06150c30}
+.emergency-metric{display:flex;align-items:baseline;gap:.04em}
+.hours-suffix{font-size:.53em;letter-spacing:-.04em;color:var(--orange)}
+
+/* Keep the real sign clear in the upper right, with all copy below it. */
+.feature-grid .feature-card{min-width:0;width:100%}
+.availability-card{justify-content:flex-end;min-height:360px;aspect-ratio:.94}
+.availability-card .experience-photo{object-position:50% 0;translate:none;scale:1;transform:none}
+.availability-card:hover .experience-photo{transform:none}
+.availability-card .experience-vignette{background:linear-gradient(180deg,transparent 30%,#172d2538 46%,#172d25e6 65%,#10241afa 100%)}
+.availability-card .feature-bottom{gap:12px}
+.availability-card .feature-bottom h3{font-size:clamp(21px,1.85vw,29px);line-height:1.08;letter-spacing:-.045em}
+.availability-details{display:flex;align-items:center;gap:18px}
+.feature-grid .availability-card .metric{font-size:clamp(60px,5.4vw,84px);margin-left:-3px}
+.availability-card .feature-bottom p{font-size:11px;line-height:1.5}
+.availability-card .card-pill{margin-top:0}
+@media(min-width:761px){
+  .feature-grid .feature-card{aspect-ratio:.94;min-height:360px}
+}
+
+.scanner-card{background:var(--green);color:var(--paper)}
+.scanner-card .feature-top,.scanner-card .feature-bottom{position:relative;z-index:4}
+.scanner-card .round-arrow{background:var(--orange);color:var(--ink)}
+.scanner-scene{position:absolute;inset:0;z-index:-3;overflow:hidden;pointer-events:none}
+.scanner-photo-plane{position:absolute;inset:-7%;scale:1.05}
+.scanner-photo-plane>img{width:100%;height:100%;object-fit:cover;object-position:53% 44%;opacity:.84}
+.scanner-vignette{
+  background:linear-gradient(180deg,#172d25db 0%,#243c3230 43%,#172d25ed 100%),linear-gradient(90deg,#172d2544,transparent 80%);
+}
+.scanner-card .card-pill{background:#ffffff16;border-color:#ffffff26}
+.scanner-card .digital-label{font-size:clamp(28px,3.05vw,49px);text-shadow:0 2px 18px #071e14b3}
+.tooth-float{
+  position:absolute;z-index:2;top:20%;right:-1%;width:48%;height:68%;
+  pointer-events:none;transform-origin:50% 55%;
+}
+.tooth-depth{height:100%;width:100%;transform-origin:50% 55%}
+.tooth-real{
+  width:100%;height:100%;object-fit:contain;max-width:none;
+  filter:drop-shadow(0 15px 20px #06150c66);
+}
+.scanner-focus-frame{position:absolute;z-index:3;right:1%;top:24%;width:44%;height:50%;pointer-events:none}
+.scan-corners{width:100%;height:100%;stroke:#f5f5ef8c;stroke-width:.8;fill:none}
+.scanner-beam{
+  position:absolute;top:39%;left:3%;right:3%;height:1px;background:var(--orange);
+  box-shadow:0 0 14px 1px #ff6a2440;
+}
+.scanner-beam:after{content:'';width:4px;height:4px;border-radius:50%;background:var(--orange);position:absolute;right:-1px;top:-1.5px}
+.scanner-focus-frame .scan-coordinate{
+  position:absolute;top:auto;bottom:-17px;left:0;right:0;color:#f5f5efad;
+  font-size:5.5px;letter-spacing:.13em;text-align:center;
+}
+@media(max-width:1000px) and (min-width:761px){
+  .scanner-card .digital-label{font-size:31px}
+  .tooth-float{width:53%;right:-4%;top:23%;height:60%}
+  .scanner-focus-frame{top:26%;height:45%;width:47%;right:0}
+  .experience-card .card-pill{font-size:5.5px;padding:8px}
+}
+@media(max-width:760px){
+  .availability-card{aspect-ratio:1.02}
+  .availability-card .feature-bottom h3{font-size:27px}
+  .feature-grid .availability-card .metric{font-size:76px}
+  .scanner-card .digital-label{font-size:44px}
+  .tooth-float{width:47%;right:0;top:17%;height:70%}
+  .scanner-focus-frame{top:21%;right:2%;height:53%;width:43%}
+  .scanner-photo-plane>img{object-position:55% 45%}
+}
+@media(max-width:480px){
+  .availability-card{min-height:360px}
+  .availability-card .feature-bottom h3{font-size:25px}
+  .feature-grid .availability-card .metric{font-size:64px}
+  .availability-details{gap:16px}
+}
+@media(max-width:380px){
+  .scanner-card .digital-label{font-size:38px}
+  .tooth-float{width:47%;right:-1%;top:21%;height:65%}
+  .scanner-focus-frame{top:25%;height:47%}
+}
