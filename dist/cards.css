@@ -1,5 +1,4 @@
 /* Photography and foreground layers keep the original three-card composition. */
-.brand-tooth{object-fit:contain;flex-shrink:0;pointer-events:none}
 .experience-card .experience-photo{
   object-position:54% 46%;
   translate:0 var(--photo-y,0%);

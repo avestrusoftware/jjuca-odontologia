@@ -20,6 +20,5 @@
   .hero-bottom{left:6%;right:6%;bottom:60px}
   .hero-word.hero-wordmark-shell{width:94%}
   .hero-wordmark-image{max-height:clamp(80px,28cqw,170px)}
-  .hero-note{bottom:calc(100px + clamp(80px,28vw,170px))}
   .footer-wordmark{margin-top:20px}
 }

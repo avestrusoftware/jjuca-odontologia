@@ -140,7 +140,6 @@
       .fromTo('.hero-word', {yPercent: 55, opacity: 0}, {
         yPercent: 0, opacity: 1, duration: 1.1, stagger: .12
       }, .38)
-      .fromTo('.hero-note', {opacity: 0, y: 16, scale: .95}, {opacity: 1, y: 0, scale: 1}, .78)
       .fromTo('.scroll-cue', {opacity: 0, y: 10}, {opacity: 1, y: 0, duration: .6}, .88);
 
     gsap.fromTo('.hero-photo img', {'--photo-scale': 1.02}, {
