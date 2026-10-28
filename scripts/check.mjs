@@ -11,7 +11,7 @@ for(const [,value] of html.matchAll(/(?:src|href)="([^"]+)"/g)){
  if(value.startsWith('#')){if(!ids.includes(value.slice(1)))failures.push('Âncora sem destino: '+value);}
  else if(value.startsWith('/')){if(!existsSync(join(dist,value)))failures.push('Recurso ausente: '+value);}
 }
-for(const file of ['dist/app.js','dist/motion.js','dist/marquee.js','server.mjs']){
+for(const file of ['dist/motion-settings.js','dist/app.js','dist/motion.js','dist/marquee.js','server.mjs']){
  const result=spawnSync(process.execPath,['--check',join(root,file)],{encoding:'utf8'});
  if(result.status!==0)failures.push(result.stderr);
 }

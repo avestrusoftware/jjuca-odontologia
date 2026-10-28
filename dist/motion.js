@@ -21,10 +21,6 @@
   const media = gsap.matchMedia();
   const entrances = new Map();
   const select = (selector, root = document) => [...root.querySelectorAll(selector)];
-  // Explicit development preview only; public visitors retain their accessibility preference.
-  const fullPreview = ['localhost', '127.0.0.1'].includes(location.hostname)
-    && new URLSearchParams(location.search).get('motion') === 'full';
-  if (fullPreview) document.documentElement.dataset.motionPreview = 'full';
 
   // Focused links/buttons become visible immediately, including after keyboard jumps.
   document.addEventListener('focusin', event => {
@@ -36,7 +32,7 @@
   media.add({
     desktop: '(min-width: 1001px)',
     mobile: '(max-width: 1000px)',
-    reduced: fullPreview ? '(max-width: 0px)' : '(prefers-reduced-motion: reduce)'
+    reduced: window.JucaMotion?.reducedQuery || '(max-width: 0px)'
   }, context => {
     if (context.conditions.reduced) return staticHero();
     const desktop = context.conditions.desktop;

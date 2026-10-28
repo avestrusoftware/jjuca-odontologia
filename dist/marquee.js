@@ -29,9 +29,7 @@
   root.append(style);
   viewport.append(plane);
 
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const preview = ['localhost', '127.0.0.1'].includes(location.hostname)
-    && new URLSearchParams(location.search).get('motion') === 'full';
+  const reduced = !!window.JucaMotion?.reduced;
   let hovered = false;
   let keyboardFocus = false;
   let inView = false;
@@ -49,7 +47,7 @@
   let drag = null;
   let pixelsPerStep = 1;
 
-  const canAnimate = () => enhancedSupported && (preview || !reduced.matches);
+  const canAnimate = () => enhancedSupported && !reduced;
   const wrap = (value, length) => ((value % length) + length) % length;
   function syncPause() {
     root.classList.toggle('is-paused', hovered || keyboardFocus || !!drag || !!navigation || !inView || document.hidden);
@@ -98,7 +96,7 @@
     if (!root.classList.contains('is-enhanced') || !animations.length) {
       const card = list.querySelector('li');
       const distance = card.getBoundingClientRect().width + parseFloat(getComputedStyle(list).gap);
-      list.scrollBy({left: direction * distance, behavior: reduced.matches ? 'instant' : 'smooth'});
+      list.scrollBy({left: direction * distance, behavior: reduced ? 'instant' : 'smooth'});
       return;
     }
 
@@ -335,22 +333,6 @@
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) endDrag(null, true);
     syncPause();
-  });
-  reduced.addEventListener('change', () => {
-    if (canAnimate()) {
-      if (inView) prepareImages();
-      requestLayout();
-    }
-    else {
-      cancelNavigation();
-      endDrag(null, true);
-      root.classList.remove('is-enhanced', 'is-ready');
-      plane.replaceChildren();
-      tiles = [];
-      tileStates = [];
-      animations = [];
-      lastSize = '';
-    }
   });
   requestLayout();
 })();

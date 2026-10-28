@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reduceMotion = window.JucaMotion || {reduced: false};
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
@@ -16,7 +16,7 @@
     menuToggle.setAttribute('aria-expanded', String(!expanded));
     menuToggle.setAttribute('aria-label', expanded ? 'Abrir menu' : 'Fechar menu');
     mobileNav.hidden = expanded;
-    if (!expanded && window.gsap && !reduceMotion.matches) gsap.from(mobileNav, {y: -8, autoAlpha: 0, duration: .25, clearProps: 'all'});
+    if (!expanded && window.gsap && !reduceMotion.reduced) gsap.from(mobileNav, {y: -8, autoAlpha: 0, duration: .25, clearProps: 'all'});
   });
   mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   document.addEventListener('click', e => { if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) closeMenu(); });
@@ -40,12 +40,12 @@
     list.replaceChildren(...content.items.map(text => { const li = document.createElement('li'); li.textContent = text; return li; }));
     dialog.showModal();
     document.body.classList.add('modal-open');
-    if (window.gsap && !reduceMotion.matches) gsap.fromTo(dialog, {y: 20, opacity: 0, scale: .98}, {y: 0, opacity: 1, scale: 1, duration:.3, ease:'power2.out'});
+    if (window.gsap && !reduceMotion.reduced) gsap.fromTo(dialog, {y: 20, opacity: 0, scale: .98}, {y: 0, opacity: 1, scale: 1, duration:.3, ease:'power2.out'});
   }));
   function closeDialog() {
     if (!dialog.open) return;
     const finish = () => { dialog.close(); };
-    if (window.gsap && !reduceMotion.matches) gsap.to(dialog, {y: 12, opacity: 0, duration:.18, ease:'power2.in', onComplete:finish});
+    if (window.gsap && !reduceMotion.reduced) gsap.to(dialog, {y: 12, opacity: 0, duration:.18, ease:'power2.in', onComplete:finish});
     else finish();
   }
   dialog.querySelector('.dialog-close').addEventListener('click', closeDialog);
@@ -56,7 +56,7 @@
 
   // Native details retain a fully functional FAQ when JavaScript is unavailable.
   document.querySelectorAll('.faq-item').forEach(item => item.addEventListener('toggle', () => {
-    if (item.open && window.gsap && !reduceMotion.matches) gsap.fromTo(item.querySelector('.faq-answer'), {opacity:0,y:-5}, {opacity:1,y:0,duration:.24,clearProps:'all'});
+    if (item.open && window.gsap && !reduceMotion.reduced) gsap.fromTo(item.querySelector('.faq-answer'), {opacity:0,y:-5}, {opacity:1,y:0,duration:.24,clearProps:'all'});
     if (window.ScrollTrigger) ScrollTrigger.refresh();
   }));
 
